@@ -1,0 +1,59 @@
+[gd_scene format=3 uid="uid://bj4a04a6qiob0"]
+
+[ext_resource type="Texture2D" uid="uid://bmt8jheuhkilk" path="res://Envirogame_intro.jpg" id="1_wtcfe"]
+
+[node name="TitleScreen" type="Node2D" unique_id=1103075191]
+
+[node name="Background" type="TextureRect" parent="." unique_id=1284871999]
+offset_right = 1154.0
+offset_bottom = 903.0
+texture = ExtResource("1_wtcfe")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1036555480]
+clip_contents = false
+offset_left = 153.0
+offset_top = 102.0
+offset_right = 1104.0
+offset_bottom = 328.0
+theme_override_colors/default_color = Color(6.697883e-10, 0.0005105155, 2.0278863e-05, 1)
+theme_override_constants/outline_size = 20
+theme_override_font_sizes/normal_font_size = 120
+text = "ENVIROGAME"
+
+[node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1534118071]
+offset_left = 400.0
+offset_top = 269.0
+offset_right = 712.0
+offset_bottom = 613.0
+
+[node name="Start" type="Button" parent="VBoxContainer" unique_id=619821561]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 38
+text = "Start"
+
+[node name="Start2" type="Button" parent="VBoxContainer" unique_id=2130969320]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 38
+text = "Settings"
+
+[node name="Start3" type="Button" parent="VBoxContainer" unique_id=246096465]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 38
+text = "Sources"
+
+[node name="Start4" type="Button" parent="VBoxContainer" unique_id=2072756334]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 9
+theme_override_font_sizes/font_size = 38
+text = "Quit"
