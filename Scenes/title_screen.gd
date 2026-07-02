@@ -13,3 +13,9 @@ func _process(delta: float) -> void:
 
 func _on_start_pressed() -> void:
 	get_tree().change_scene_to_file("/Users/temidire/godot/envirogame/environment/Scenes/level_scene.tscn") # Replace with function body.
+
+
+
+
+func _on_quit_pressed() -> void:
+	get_tree().change_scene_to_file("/Users/temidire/godot/envirogame/environment/Scenes/quit_screen.tscn")

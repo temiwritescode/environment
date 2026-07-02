@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://cq1m6vidojm54"]
+
+[ext_resource type="Texture2D" uid="uid://dmjqq1mungqsk" path="res://white_bg.jpg" id="1_g3ndn"]
+[ext_resource type="Texture2D" uid="uid://bccmu0u1w5c1d" path="res://sadsprite.png" id="2_n4bbm"]
+
+[node name="quit screen" type="Node2D" unique_id=382032226]
+
+[node name="white_bg" type="TextureRect" parent="." unique_id=1144674568]
+offset_right = 1156.0
+offset_bottom = 650.0
+texture = ExtResource("1_g3ndn")
+
+[node name="sad_sprite" type="TextureRect" parent="." unique_id=549733698]
+offset_left = 312.0
+offset_top = 80.0
+offset_right = 826.0
+offset_bottom = 576.0
+texture = ExtResource("2_n4bbm")
