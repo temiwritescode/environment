@@ -1,0 +1,13 @@
+[gd_scene format=3 uid="uid://dlk8wh3rm4qx3"]
+
+[ext_resource type="VideoStream" uid="uid://dcpcdbr8m7303" path="res://origin_story.ogv" id="1_rol8n"]
+
+[node name="level_scene" type="Node2D" unique_id=420866548]
+
+[node name="origin_story" type="VideoStreamPlayer" parent="." unique_id=94910605]
+offset_left = 160.0
+offset_top = 17.0
+offset_right = 1054.0
+offset_bottom = 785.0
+stream = ExtResource("1_rol8n")
+autoplay = true

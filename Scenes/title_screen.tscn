@@ -1,8 +1,11 @@
 [gd_scene format=3 uid="uid://dlvrnq7r2kw8p"]
 
 [ext_resource type="Texture2D" uid="uid://bmt8jheuhkilk" path="res://Envirogame_intro.jpg" id="1_klylv"]
+[ext_resource type="Script" uid="uid://bi0h84c7e0xi0" path="res://Scenes/title_screen.gd" id="1_p3fck"]
+[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="3_4gxqj"]
 
 [node name="TitleScreen" type="Node2D" unique_id=1103075191]
+script = ExtResource("1_p3fck")
 
 [node name="Background" type="TextureRect" parent="." unique_id=1284871999]
 offset_top = 1.0
@@ -12,14 +15,16 @@ texture = ExtResource("1_klylv")
 
 [node name="Title" type="RichTextLabel" parent="." unique_id=1036555480]
 clip_contents = false
-offset_left = 199.0
-offset_top = 68.0
-offset_right = 1150.0
-offset_bottom = 294.0
+offset_left = 263.0
+offset_top = 50.0
+offset_right = 1214.0
+offset_bottom = 276.0
 theme_override_colors/default_color = Color(6.697883e-10, 0.0005105155, 2.0278863e-05, 1)
-theme_override_constants/outline_size = 20
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("3_4gxqj")
 theme_override_font_sizes/normal_font_size = 120
-text = "ENVIROGAME"
+text = "Envirogame"
 
 [node name="VBoxContainer" type="VBoxContainer" parent="." unique_id=1534118071]
 offset_left = 468.0
@@ -32,30 +37,37 @@ theme_override_constants/separation = 12
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 9
-theme_override_font_sizes/font_size = 38
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_4gxqj")
+theme_override_font_sizes/font_size = 30
 text = "Start"
 
-[node name="Start2" type="Button" parent="VBoxContainer" unique_id=2130969320]
+[node name="Settings" type="Button" parent="VBoxContainer" unique_id=2130969320]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 9
-theme_override_font_sizes/font_size = 38
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_4gxqj")
+theme_override_font_sizes/font_size = 30
 text = "Settings"
 
-[node name="Start3" type="Button" parent="VBoxContainer" unique_id=246096465]
+[node name="Sources" type="Button" parent="VBoxContainer" unique_id=246096465]
 layout_mode = 2
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 9
-theme_override_font_sizes/font_size = 38
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_4gxqj")
+theme_override_font_sizes/font_size = 30
 text = "Sources"
 
-[node name="Start4" type="Button" parent="VBoxContainer" unique_id=2072756334]
+[node name="Quit" type="Button" parent="VBoxContainer" unique_id=2072756334]
 layout_mode = 2
+tooltip_text = "You're not giving Emvirogame a chance? :("
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
-theme_override_constants/outline_size = 9
-theme_override_font_sizes/font_size = 38
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_4gxqj")
+theme_override_font_sizes/font_size = 30
 text = "Quit"
+
+[connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
