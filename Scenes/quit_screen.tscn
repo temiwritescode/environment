@@ -1,9 +1,14 @@
 [gd_scene format=3 uid="uid://cq1m6vidojm54"]
 
+[ext_resource type="Script" uid="uid://d0v8hklb7po0q" path="res://Scenes/quit_screen.gd" id="1_15usi"]
 [ext_resource type="Texture2D" uid="uid://dmjqq1mungqsk" path="res://white_bg.jpg" id="1_g3ndn"]
 [ext_resource type="Texture2D" uid="uid://bccmu0u1w5c1d" path="res://sadsprite.png" id="2_n4bbm"]
+[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="3_2wu60"]
 
-[node name="quit screen" type="Node2D" unique_id=382032226]
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_15usi"]
+
+[node name="QuitScreen" type="Node2D" unique_id=382032226]
+script = ExtResource("1_15usi")
 
 [node name="white_bg" type="TextureRect" parent="." unique_id=1144674568]
 offset_right = 1156.0
@@ -11,8 +16,32 @@ offset_bottom = 650.0
 texture = ExtResource("1_g3ndn")
 
 [node name="sad_sprite" type="TextureRect" parent="." unique_id=549733698]
-offset_left = 312.0
-offset_top = 80.0
-offset_right = 826.0
-offset_bottom = 576.0
+offset_left = 310.0
+offset_top = 122.0
+offset_right = 824.0
+offset_bottom = 618.0
 texture = ExtResource("2_n4bbm")
+
+[node name="TextEdit" type="TextEdit" parent="." unique_id=248234126]
+offset_left = 620.0
+offset_top = 68.0
+offset_right = 1396.0
+offset_bottom = 200.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_constants/caret_width = 1
+theme_override_fonts/font = ExtResource("3_2wu60")
+theme_override_font_sizes/font_size = 50
+theme_override_styles/normal = SubResource("StyleBoxEmpty_15usi")
+text = "Bye bye..."
+
+[node name="Back" type="Button" parent="." unique_id=101987724]
+offset_left = 512.0
+offset_top = 586.0
+offset_right = 614.0
+offset_bottom = 630.0
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_2wu60")
+theme_override_font_sizes/font_size = 16
+text = "Back"
+
+[connection signal="pressed" from="Back" to="." method="_on_back_pressed"]

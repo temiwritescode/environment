@@ -12,7 +12,7 @@ func _process(delta: float) -> void:
 
 
 func _on_start_pressed() -> void:
-	get_tree().change_scene_to_file("/Users/temidire/godot/envirogame/environment/Scenes/level_scene.tscn") # Replace with function body.
+	get_tree().change_scene_to_file("/Users/temidire/godot/envirogame/environment/Scenes/origin_screen.tscn") # Replace with function body.
 
 
 

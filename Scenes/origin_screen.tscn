@@ -1,26 +1,26 @@
-[gd_scene format=3 uid="uid://t5ypkc2tcqqj"]
+[gd_scene format=3 uid="uid://dlk8wh3rm4qx3"]
 
-[ext_resource type="Script" uid="uid://c4sjkd0whjeqa" path="res://Scenes/level_scene.gd" id="1_2fcgv"]
-[ext_resource type="Texture2D" uid="uid://dmjqq1mungqsk" path="res://white_bg.jpg" id="1_cn3xy"]
-[ext_resource type="VideoStream" uid="uid://dcpcdbr8m7303" path="res://origin_story.ogv" id="1_rol8n"]
-[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="3_c7xwe"]
+[ext_resource type="Script" uid="uid://c4sjkd0whjeqa" path="res://Scenes/level_scene.gd" id="1_opulm"]
+[ext_resource type="Texture2D" uid="uid://bw00hpjjdy6f1" path="res://blue_bg.JPEG" id="2_opulm"]
+[ext_resource type="VideoStream" uid="uid://dcpcdbr8m7303" path="res://origin_story.ogv" id="3_p4ipi"]
+[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="4_13o37"]
 
-[node name="origin_scene" type="Node2D" unique_id=420866548]
-script = ExtResource("1_2fcgv")
+[node name="OriginScreen" type="Node2D" unique_id=420866548]
+script = ExtResource("1_opulm")
 
-[node name="white_bg" type="TextureRect" parent="." unique_id=1903874238]
-offset_left = -87.0
-offset_top = -157.0
-offset_right = 1390.0
-offset_bottom = 720.0
-texture = ExtResource("1_cn3xy")
+[node name="blue_bg" type="TextureRect" parent="." unique_id=1903874238]
+offset_left = -99.0
+offset_top = -146.0
+offset_right = 1378.0
+offset_bottom = 731.0
+texture = ExtResource("2_opulm")
 
 [node name="origin_story" type="VideoStreamPlayer" parent="." unique_id=94910605]
-offset_left = 252.0
-offset_top = -26.0
-offset_right = 1020.0
-offset_bottom = 742.0
-stream = ExtResource("1_rol8n")
+offset_left = 75.0
+offset_top = -6.0
+offset_right = 1035.0
+offset_bottom = 714.0
+stream = ExtResource("3_p4ipi")
 autoplay = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1543763269]
@@ -38,7 +38,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_c7xwe")
+theme_override_fonts/font = ExtResource("4_13o37")
 text = "Back"
 
 [node name="Continue" type="Button" parent="HBoxContainer" unique_id=504981500]
@@ -47,7 +47,7 @@ size_flags_horizontal = 3
 theme_override_colors/font_color = Color(1, 1, 1, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("3_c7xwe")
+theme_override_fonts/font = ExtResource("4_13o37")
 text = "Continue"
 
 [connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_back_pressed"]
