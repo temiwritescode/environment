@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://bw00hpjjdy6f1" path="res://blue_bg.JPEG" id="2_opulm"]
 [ext_resource type="VideoStream" uid="uid://dcpcdbr8m7303" path="res://origin_story.ogv" id="3_p4ipi"]
 [ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="4_13o37"]
+[ext_resource type="AudioStream" uid="uid://bep8maoohbgpu" path="res://Button_click.mp3" id="5_aoho6"]
 
 [node name="OriginScreen" type="Node2D" unique_id=420866548]
 script = ExtResource("1_opulm")
@@ -21,6 +22,7 @@ offset_top = -6.0
 offset_right = 1035.0
 offset_bottom = 714.0
 stream = ExtResource("3_p4ipi")
+speed_scale = 0.639
 autoplay = true
 
 [node name="HBoxContainer" type="HBoxContainer" parent="." unique_id=1543763269]
@@ -50,4 +52,21 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("4_13o37")
 text = "Continue"
 
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1452427742]
+stream = ExtResource("5_aoho6")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1124889606]
+clip_contents = false
+offset_left = 552.0
+offset_top = 8.0
+offset_right = 1142.0
+offset_bottom = 177.0
+theme_override_colors/default_color = Color(6.697883e-10, 0.0005105155, 2.0278863e-05, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("4_13o37")
+theme_override_font_sizes/normal_font_size = 23
+text = "Hi! You are Particulate Matter 2.5, a particle so small that you can't be seen with human eyes. Little do they know, you're everywhere.. Watch your birth story!"
+
 [connection signal="pressed" from="HBoxContainer/Back" to="." method="_on_back_pressed"]
+[connection signal="pressed" from="HBoxContainer/Continue" to="." method="_on_continue_pressed"]

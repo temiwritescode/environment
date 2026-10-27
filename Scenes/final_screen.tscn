@@ -1,0 +1,45 @@
+[gd_scene format=3 uid="uid://c6k0ex5llwf41"]
+
+[ext_resource type="Texture2D" uid="uid://01ekwsex4sxp" path="res://red_bg.jpg" id="1_vi8pr"]
+[ext_resource type="VideoStream" uid="uid://f8wth2cxdqmm" path="res://final_scene.ogv" id="2_wshgw"]
+[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="3_wshgw"]
+[ext_resource type="Script" uid="uid://dj0jepah3ba42" path="res://Scenes/restart.gd" id="4_s8qol"]
+[ext_resource type="AudioStream" uid="uid://bep8maoohbgpu" path="res://Button_click.mp3" id="5_om4r5"]
+
+[node name="final_screen" type="Node2D" unique_id=417597111]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=1561617832]
+offset_left = -112.0
+offset_top = -118.0
+offset_right = 1508.0
+offset_bottom = 2042.0
+texture = ExtResource("1_vi8pr")
+
+[node name="VideoStreamPlayer" type="VideoStreamPlayer" parent="." unique_id=2132912995]
+offset_left = 367.99997
+offset_top = 4.0
+offset_right = 1088.0
+offset_bottom = 964.0
+scale = Vector2(0.67, 0.67)
+stream = ExtResource("2_wshgw")
+autoplay = true
+loop = true
+
+[node name="Restart" type="Button" parent="." unique_id=782755572]
+z_index = 10
+offset_left = 542.0
+offset_top = 566.0
+offset_right = 658.0
+offset_bottom = 641.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 8
+theme_override_fonts/font = ExtResource("3_wshgw")
+theme_override_font_sizes/font_size = 19
+text = "Restart"
+script = ExtResource("4_s8qol")
+
+[node name="Click" type="AudioStreamPlayer" parent="Restart" unique_id=413659977]
+stream = ExtResource("5_om4r5")
+
+[connection signal="pressed" from="Restart" to="Restart" method="_on_pressed"]

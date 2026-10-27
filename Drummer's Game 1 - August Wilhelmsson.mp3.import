@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://b45asyxg7ypkr"
+path="res://.godot/imported/Drummer's Game 1 - August Wilhelmsson.mp3-d8d62240b0b3086fc4275d3d136fe824.mp3str"
+
+[deps]
+
+source_file="res://Drummer's Game 1 - August Wilhelmsson.mp3"
+dest_files=["res://.godot/imported/Drummer's Game 1 - August Wilhelmsson.mp3-d8d62240b0b3086fc4275d3d136fe824.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

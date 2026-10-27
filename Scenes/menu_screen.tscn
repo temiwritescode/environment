@@ -1,0 +1,107 @@
+[gd_scene format=3 uid="uid://cfbx1dmapsotq"]
+
+[ext_resource type="Texture2D" uid="uid://64lk60xft83v" path="res://level_scene.jpg" id="1_bmx56"]
+[ext_resource type="Script" uid="uid://bjn4mgx2wvp25" path="res://Scenes/menu_screen.gd" id="1_wvdu7"]
+[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="2_f1kxn"]
+[ext_resource type="Texture2D" uid="uid://cq7840g11wlc6" path="res://esophagus.png" id="3_vrhsl"]
+[ext_resource type="Texture2D" uid="uid://dyejffi5204xj" path="res://esophagus_hover.png" id="4_wvdu7"]
+[ext_resource type="Texture2D" uid="uid://f8fyrn0osi07" path="res://level_two_hover.png" id="7_ome7q"]
+[ext_resource type="Texture2D" uid="uid://ba380e25x4nrd" path="res://level_three_button.png" id="7_pg5jj"]
+[ext_resource type="Texture2D" uid="uid://c631idfjg32y" path="res://level_four_button.png" id="8_qj8sk"]
+[ext_resource type="Texture2D" uid="uid://ct075j5op5hed" path="res://level_four_hover.png" id="9_0kwut"]
+[ext_resource type="Texture2D" uid="uid://d1jpimqep8c6a" path="res://level_three_hover.png" id="9_2y8dj"]
+[ext_resource type="Texture2D" uid="uid://dy28vw5ach7dw" path="res://level_five_button.png" id="10_0kwut"]
+[ext_resource type="Texture2D" uid="uid://nis5qlcoj1r6" path="res://level_five_hover.png" id="11_pg5jj"]
+[ext_resource type="AudioStream" uid="uid://bep8maoohbgpu" path="res://Button_click.mp3" id="13_52y35"]
+
+[node name="menu_screen" type="Node2D" unique_id=117777801]
+script = ExtResource("1_wvdu7")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=1090055159]
+offset_left = -3815.0
+offset_top = -154.0
+offset_right = 1254.0
+offset_bottom = 2362.0
+texture = ExtResource("1_bmx56")
+expand_mode = 1
+
+[node name="TextureRect3" type="TextureRect" parent="." unique_id=1693632113]
+offset_left = 146.0
+offset_top = 73.0
+offset_right = 892.0
+offset_bottom = 645.0
+texture = ExtResource("1_bmx56")
+expand_mode = 1
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1826593098]
+clip_contents = false
+offset_left = 239.0
+offset_top = -10.0
+offset_right = 785.0
+offset_bottom = 124.0
+theme_override_colors/default_color = Color(6.697883e-10, 0.0005105155, 2.0278863e-05, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("2_f1kxn")
+theme_override_font_sizes/normal_font_size = 60
+text = "SELECT  LEVEL"
+
+[node name="LevelOne" type="TextureButton" parent="." unique_id=461241850]
+offset_left = 425.0
+offset_top = 78.0
+offset_right = 578.0
+offset_bottom = 174.0
+texture_normal = ExtResource("3_vrhsl")
+texture_pressed = ExtResource("4_wvdu7")
+texture_hover = ExtResource("4_wvdu7")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LevelTwo" type="TextureButton" parent="." unique_id=1914483448]
+offset_left = 543.0
+offset_top = 301.0
+offset_right = 718.0
+offset_bottom = 397.0
+texture_pressed = ExtResource("7_ome7q")
+texture_hover = ExtResource("7_ome7q")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LevelThree" type="TextureButton" parent="." unique_id=317941220]
+offset_left = 228.0
+offset_top = 383.0
+offset_right = 388.0
+offset_bottom = 484.0
+texture_normal = ExtResource("7_pg5jj")
+texture_pressed = ExtResource("9_2y8dj")
+texture_hover = ExtResource("9_2y8dj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LevelFour" type="TextureButton" parent="." unique_id=484386774]
+offset_left = 404.0
+offset_top = 446.0
+offset_right = 571.0
+offset_bottom = 548.0
+texture_normal = ExtResource("8_qj8sk")
+texture_pressed = ExtResource("9_0kwut")
+texture_hover = ExtResource("9_0kwut")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="LevelFive" type="TextureButton" parent="." unique_id=1628277266]
+offset_left = 435.0
+offset_top = 545.0
+offset_right = 602.0
+offset_bottom = 647.0
+texture_normal = ExtResource("10_0kwut")
+texture_pressed = ExtResource("11_pg5jj")
+texture_hover = ExtResource("11_pg5jj")
+ignore_texture_size = true
+stretch_mode = 0
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1462567042]
+stream = ExtResource("13_52y35")
+
+[connection signal="pressed" from="LevelOne" to="." method="_on_level_one_pressed"]
+[connection signal="pressed" from="LevelTwo" to="." method="_on_level_two_pressed"]

@@ -1,0 +1,113 @@
+[gd_scene format=3 uid="uid://bdt4kh4yo7ev2"]
+
+[ext_resource type="Texture2D" uid="uid://coy5b5di5ke42" path="res://level_one_bg.jpeg" id="1_6uaf3"]
+[ext_resource type="PackedScene" uid="uid://4on8u1pygu1n" path="res://Scenes/platformer_1.tscn" id="2_ed0bu"]
+[ext_resource type="PackedScene" uid="uid://28baf63etlac" path="res://Scenes/player.tscn" id="3_83i7q"]
+[ext_resource type="PackedScene" uid="uid://hyn2vgvkhxcn" path="res://Scenes/platform_2.tscn" id="4_ouprj"]
+[ext_resource type="PackedScene" uid="uid://ftd2y5qc3b7k" path="res://Scenes/platform_3.tscn" id="5_ssnvi"]
+[ext_resource type="PackedScene" uid="uid://chlu35q5bn6py" path="res://Scenes/platform_4.tscn" id="6_wso7r"]
+[ext_resource type="PackedScene" uid="uid://bey86gftfr8av" path="res://Scenes/platform_5.tscn" id="7_h1vte"]
+[ext_resource type="PackedScene" uid="uid://csfegyh7unau5" path="res://Scenes/platform_6.tscn" id="8_3k01g"]
+[ext_resource type="Texture2D" uid="uid://bmt8jheuhkilk" path="res://Envirogame_intro.jpg" id="9_ssnvi"]
+[ext_resource type="Texture2D" uid="uid://d0c6tetijap7k" path="res://evil_sprite.png" id="10_wso7r"]
+[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="11_h1vte"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ssnvi"]
+size = Vector2(1292, 1553)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h1vte"]
+size = Vector2(149, 141)
+
+[node name="level_one_screen" type="Node2D" unique_id=405154366]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=166120820]
+offset_left = 2.0
+offset_top = -37.0
+offset_right = 1154.0
+offset_bottom = 1576.0
+texture = ExtResource("1_6uaf3")
+expand_mode = 1
+stretch_mode = 5
+
+[node name="platformer_1" parent="." unique_id=1789064868 instance=ExtResource("2_ed0bu")]
+position = Vector2(323, 136)
+scale = Vector2(0.48, 0.48)
+
+[node name="Player" parent="." unique_id=406995420 instance=ExtResource("3_83i7q")]
+position = Vector2(138, 47)
+scale = Vector2(0.55, 0.55)
+
+[node name="platform_2" parent="." unique_id=475662051 instance=ExtResource("4_ouprj")]
+position = Vector2(835, 357)
+scale = Vector2(0.47, 0.47)
+
+[node name="platform_3" parent="." unique_id=735546275 instance=ExtResource("5_ssnvi")]
+position = Vector2(244.99998, 565)
+scale = Vector2(0.44, 0.44)
+
+[node name="platform_4" parent="." unique_id=1648504348 instance=ExtResource("6_wso7r")]
+position = Vector2(602, 816.00006)
+scale = Vector2(0.7, 0.7)
+
+[node name="platform_5" parent="." unique_id=545092786 instance=ExtResource("7_h1vte")]
+position = Vector2(699, 1077)
+scale = Vector2(0.45, 0.45)
+
+[node name="platform_6" parent="." unique_id=2039434855 instance=ExtResource("8_3k01g")]
+position = Vector2(467.00003, 1347.0001)
+scale = Vector2(0.54, 0.54)
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=338462546]
+z_index = -20
+offset_left = -1756.0
+offset_top = -395.0
+offset_right = 2472.0
+offset_bottom = 3648.0
+texture = ExtResource("9_ssnvi")
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=2104900051]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="StaticBody2D" unique_id=819318751]
+position = Vector2(629, -777)
+shape = SubResource("RectangleShape2D_ssnvi")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=300968454]
+position = Vector2(-645, 765)
+shape = SubResource("RectangleShape2D_ssnvi")
+
+[node name="CollisionShape2D3" type="CollisionShape2D" parent="StaticBody2D" unique_id=371192616]
+position = Vector2(1862, 763)
+shape = SubResource("RectangleShape2D_ssnvi")
+
+[node name="CollisionShape2D4" type="CollisionShape2D" parent="StaticBody2D" unique_id=676394794]
+position = Vector2(618, 2316)
+shape = SubResource("RectangleShape2D_ssnvi")
+
+[node name="ChangeScene1" type="Area2D" parent="." unique_id=1101171401]
+position = Vector2(5, 0)
+
+[node name="TextureRect" type="TextureRect" parent="ChangeScene1" unique_id=582614631]
+offset_left = 987.0
+offset_top = 1362.0
+offset_right = 1167.0
+offset_bottom = 1542.0
+texture = ExtResource("10_wso7r")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeScene1" unique_id=1145508813]
+position = Vector2(1074.5, 1467.5)
+shape = SubResource("RectangleShape2D_h1vte")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=1732547547]
+clip_contents = false
+offset_left = 781.0
+offset_top = -1.0
+offset_right = 1158.0
+offset_bottom = 314.0
+theme_override_colors/default_color = Color(6.697883e-10, 0.0005105155, 2.0278863e-05, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("11_h1vte")
+theme_override_font_sizes/normal_font_size = 24
+text = "Hi! Enjoy your journey navigating (destroying) the huma body! Welcome to the trachea. Find your friends and annihilate all the healthy mucus..."
+
+[connection signal="body_entered" from="ChangeScene1" to="Player" method="_on_change_scene_1_body_entered"]

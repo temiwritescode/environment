@@ -12,4 +12,6 @@ func _process(delta: float) -> void:
 
 
 func _on_back_pressed() -> void:
+	$Click.play()
+	await $Click.finished
 	get_tree().change_scene_to_file("/Users/temidire/godot/envirogame/environment/Scenes/title_screen.tscn")

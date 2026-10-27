@@ -1,0 +1,25 @@
+[gd_scene format=3 uid="uid://cdjdmke0rsi46"]
+
+[ext_resource type="Texture2D" uid="uid://crdjqvfio0gxx" path="res://bronchial.webp" id="1_ihjm3"]
+[ext_resource type="Texture2D" uid="uid://d0l2m2mn7egh0" path="res://platform_7.png" id="2_gchfp"]
+[ext_resource type="Texture2D" uid="uid://xu7go4flynby" path="res://happy_mucus_1.png" id="3_c7ftr"]
+
+[node name="level_two_screen" type="Node2D" unique_id=392422723]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=57937088]
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 1893.0
+offset_bottom = 1557.0
+texture = ExtResource("1_ihjm3")
+stretch_mode = 4
+
+[node name="Platform7" type="Sprite2D" parent="." unique_id=1543685102]
+position = Vector2(276.99997, 442.9375)
+scale = Vector2(0.22749197, 0.23057067)
+texture = ExtResource("2_gchfp")
+
+[node name="HappyMucus1" type="Sprite2D" parent="." unique_id=1118038115]
+position = Vector2(107.5, 278)
+scale = Vector2(0.25326085, 0.23695652)
+texture = ExtResource("3_c7ftr")

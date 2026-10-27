@@ -1,0 +1,150 @@
+[gd_scene format=3 uid="uid://jdd8qbf6052h"]
+
+[ext_resource type="Texture2D" uid="uid://crdjqvfio0gxx" path="res://bronchial.webp" id="1_ukiov"]
+[ext_resource type="Texture2D" uid="uid://d0l2m2mn7egh0" path="res://platform_7.png" id="2_darg1"]
+[ext_resource type="PackedScene" uid="uid://0o7vn7vqukrs" path="res://Scenes/platform_8.tscn" id="4_5ob7u"]
+[ext_resource type="PackedScene" uid="uid://bs4l3r4pab2r5" path="res://Scenes/platform_9.tscn" id="5_2do2o"]
+[ext_resource type="PackedScene" uid="uid://cvb7hpi0gvaoq" path="res://Scenes/platform_10.tscn" id="6_vd25c"]
+[ext_resource type="PackedScene" uid="uid://hxkxkjrba3ml" path="res://Scenes/platform_11.tscn" id="7_vkyia"]
+[ext_resource type="PackedScene" uid="uid://8f67eiq1u3ht" path="res://Scenes/platform_12.tscn" id="8_mkra4"]
+[ext_resource type="PackedScene" uid="uid://iag7p2fi7eqr" path="res://Scenes/happy_mucus_2.tscn" id="9_mkra4"]
+[ext_resource type="Script" uid="uid://cb2vj4tmluxwp" path="res://Scenes/happy_mucus_1.gd" id="9_tp3sj"]
+[ext_resource type="PackedScene" uid="uid://c0otbbw0ntdsj" path="res://Scenes/happy_mucus_3.tscn" id="10_c4tht"]
+[ext_resource type="PackedScene" uid="uid://qxf2caway1ui" path="res://Scenes/happy_mucus_1.tscn" id="10_mkra4"]
+[ext_resource type="PackedScene" uid="uid://28baf63etlac" path="res://Scenes/player.tscn" id="11_c4tht"]
+[ext_resource type="Script" uid="uid://ik2qjnvo0sj7" path="res://Scenes/happy_mucus_2.gd" id="11_ik071"]
+[ext_resource type="PackedScene" uid="uid://ckq31nbgskrad" path="res://platform_7.tscn" id="12_hhrga"]
+[ext_resource type="Script" uid="uid://bbb3e86rb4unw" path="res://Scenes/happy_mucus_3.gd" id="13_h3not"]
+[ext_resource type="Texture2D" uid="uid://bmt8jheuhkilk" path="res://Envirogame_intro.jpg" id="13_kh0r1"]
+[ext_resource type="Texture2D" uid="uid://d0c6tetijap7k" path="res://evil_sprite.png" id="14_ypboa"]
+[ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="15_72otv"]
+[ext_resource type="Script" uid="uid://dxy5tturaa5ok" path="res://Scenes/change_scene_2.gd" id="17_oj5o0"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_hhrga"]
+size = Vector2(1202.3125, 1586.25)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_72otv"]
+size = Vector2(149, 141)
+
+[node name="level_two_screen" type="Node2D" unique_id=392422723]
+
+[node name="TextureRect" type="TextureRect" parent="." unique_id=57937088]
+offset_left = 1.0
+offset_top = 8.0
+offset_right = 1893.0
+offset_bottom = 1557.0
+texture = ExtResource("1_ukiov")
+stretch_mode = 4
+
+[node name="Platform7" type="Sprite2D" parent="." unique_id=1543685102]
+position = Vector2(285.00003, 448.00003)
+scale = Vector2(0.22749197, 0.23057067)
+texture = ExtResource("2_darg1")
+
+[node name="platform_8" parent="." unique_id=1167807232 instance=ExtResource("4_5ob7u")]
+position = Vector2(710.99994, 476)
+scale = Vector2(0.22, 0.22)
+
+[node name="platform_9" parent="." unique_id=1394497403 instance=ExtResource("5_2do2o")]
+position = Vector2(465, 770)
+scale = Vector2(0.23, 0.23)
+
+[node name="platform_10" parent="." unique_id=1808326543 instance=ExtResource("6_vd25c")]
+position = Vector2(913, 717)
+scale = Vector2(0.23, 0.23)
+
+[node name="platform_11" parent="." unique_id=1850976655 instance=ExtResource("7_vkyia")]
+position = Vector2(326, 946)
+scale = Vector2(0.24, 0.24)
+
+[node name="platform_12" parent="." unique_id=110504350 instance=ExtResource("8_mkra4")]
+position = Vector2(448, 1361.0001)
+scale = Vector2(0.22, 0.22)
+
+[node name="happy_mucus_1" parent="." unique_id=2109090460 instance=ExtResource("10_mkra4")]
+position = Vector2(123, 270)
+scale = Vector2(0.27, 0.27)
+script = ExtResource("9_tp3sj")
+
+[node name="happy_mucus_2" parent="." unique_id=1351228186 instance=ExtResource("9_mkra4")]
+position = Vector2(635, 643)
+scale = Vector2(0.23, 0.23)
+script = ExtResource("11_ik071")
+
+[node name="happy_mucus_3" parent="." unique_id=416546986 instance=ExtResource("10_c4tht")]
+position = Vector2(432, 1227.0001)
+scale = Vector2(0.21, 0.21)
+script = ExtResource("13_h3not")
+
+[node name="Player" parent="." unique_id=406995420 instance=ExtResource("11_c4tht")]
+position = Vector2(86, 74)
+scale = Vector2(0.46, 0.46)
+
+[node name="platform_7" parent="." unique_id=2100609300 instance=ExtResource("12_hhrga")]
+position = Vector2(288, 447)
+scale = Vector2(0.23, 0.23)
+
+[node name="StaticBody2D" type="StaticBody2D" parent="." unique_id=1494868453]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D" unique_id=125284790]
+position = Vector2(-605, 759)
+shape = SubResource("RectangleShape2D_hhrga")
+
+[node name="StaticBody2D2" type="StaticBody2D" parent="." unique_id=10726215]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D2" unique_id=188424274]
+position = Vector2(1766, 799)
+shape = SubResource("RectangleShape2D_hhrga")
+
+[node name="StaticBody2D3" type="StaticBody2D" parent="." unique_id=1594751296]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D3" unique_id=813284475]
+position = Vector2(599.84375, 2351)
+shape = SubResource("RectangleShape2D_hhrga")
+
+[node name="StaticBody2D4" type="StaticBody2D" parent="." unique_id=1670178196]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D4" unique_id=335609708]
+position = Vector2(586, -794)
+shape = SubResource("RectangleShape2D_hhrga")
+
+[node name="TextureRect2" type="TextureRect" parent="." unique_id=336505855]
+z_index = -20
+offset_left = -756.0
+offset_top = -105.0
+offset_right = 1677.0
+offset_bottom = 1929.0
+texture = ExtResource("13_kh0r1")
+
+[node name="ChangeScene2" type="Area2D" parent="." unique_id=7881460]
+position = Vector2(5, 0)
+script = ExtResource("17_oj5o0")
+
+[node name="TextureRect" type="TextureRect" parent="ChangeScene2" unique_id=796878002]
+offset_left = 987.0
+offset_top = 1362.0
+offset_right = 1167.0
+offset_bottom = 1542.0
+texture = ExtResource("14_ypboa")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="ChangeScene2" unique_id=186503840]
+position = Vector2(1074.5, 1467.5)
+shape = SubResource("RectangleShape2D_72otv")
+
+[node name="Title" type="RichTextLabel" parent="." unique_id=852961223]
+clip_contents = false
+offset_left = 256.0
+offset_top = 8.0
+offset_right = 1031.0
+offset_bottom = 177.0
+theme_override_colors/default_color = Color(6.697883e-10, 0.0005105155, 2.0278863e-05, 1)
+theme_override_colors/font_outline_color = Color(1, 1, 1, 1)
+theme_override_constants/outline_size = 3
+theme_override_fonts/normal_font = ExtResource("15_72otv")
+theme_override_font_sizes/normal_font_size = 34
+text = "Destroy all the good mucus that helps the airways!! Then, check in with your particulate matter friend."
+
+[connection signal="body_entered" from="happy_mucus_1" to="happy_mucus_1" method="_on_body_entered"]
+[connection signal="body_entered" from="happy_mucus_2" to="happy_mucus_2" method="_on_body_entered"]
+[connection signal="body_entered" from="happy_mucus_3" to="happy_mucus_3" method="_on_body_entered"]
+[connection signal="body_entered" from="ChangeScene2" to="ChangeScene2" method="_on_body_entered"]

@@ -4,6 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dmjqq1mungqsk" path="res://white_bg.jpg" id="1_g3ndn"]
 [ext_resource type="Texture2D" uid="uid://bccmu0u1w5c1d" path="res://sadsprite.png" id="2_n4bbm"]
 [ext_resource type="FontFile" uid="uid://try0lngqn8xj" path="res://font_shooting_star.ttf" id="3_2wu60"]
+[ext_resource type="AudioStream" uid="uid://bep8maoohbgpu" path="res://Button_click.mp3" id="5_fyuir"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_15usi"]
 
@@ -43,5 +44,8 @@ theme_override_constants/outline_size = 5
 theme_override_fonts/font = ExtResource("3_2wu60")
 theme_override_font_sizes/font_size = 16
 text = "Back"
+
+[node name="Click" type="AudioStreamPlayer" parent="." unique_id=1441912214]
+stream = ExtResource("5_fyuir")
 
 [connection signal="pressed" from="Back" to="." method="_on_back_pressed"]
